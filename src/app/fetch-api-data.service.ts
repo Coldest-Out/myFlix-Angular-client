@@ -9,7 +9,7 @@ const apiUrl = 'https://cold-myflix-app.herokuapp.com/';
 @Injectable({
   providedIn: 'root'
 })
-export class UserRegistrationService {
+export class FetchApiDataService {
   // Inject the HttpClient module to the constructor params
   // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) {
@@ -68,7 +68,7 @@ export class UserRegistrationService {
     // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
     return this.http
-      .get(apiUrl + `movies/director/${name}`, {
+      .get(apiUrl + `/director/${name}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         })
@@ -80,11 +80,11 @@ export class UserRegistrationService {
   }
 
   // Retrieve Genre Info Endpoint (GET)
-  getGenre(name: any): Observable<any> {
+  getGenre(title: any): Observable<any> {
     // Get Authorization token stored in local storage
     const token = localStorage.getItem('token');
     return this.http
-      .get(apiUrl + `movies/genre/${name}`, {
+      .get(apiUrl + `movies/genre/${title}`, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         })
