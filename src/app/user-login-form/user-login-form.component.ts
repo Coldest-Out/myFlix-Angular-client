@@ -16,7 +16,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   //styleUrls: ['./user-login-form.component.css']
 })
 export class UserLoginFormComponent implements OnInit {
-  @Input() userCredentials = { Username: '', Password: '' };
+  @Input() userData = { Username: '', Password: '' };
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -27,7 +27,7 @@ export class UserLoginFormComponent implements OnInit {
   ngOnInit(): void { }
 
   loginUser(): void {
-    this.fetchApiData.userLogin(this.userCredentials).subscribe(
+    this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {
         console.log(result);
         // Add token and username to local Storage
