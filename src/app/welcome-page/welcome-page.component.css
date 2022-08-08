@@ -1,0 +1,30 @@
+.welcome-container {
+	padding-top: 10%;
+	bottom: -100px;
+	height: 100%;
+	text-align: center;
+}
+
+.welcome-title {
+	margin-bottom: 48px;
+}
+
+h1 {
+	position: relative;
+	top: 10px;
+	font-size: 40px;
+	text-align: center;
+	font-weight: 500;
+}
+
+button {
+	margin-right: 30px;
+	font-size: 1.2em;
+}
+
+.btn-container {
+	text-align: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
