@@ -48,7 +48,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatSnackBarModule,
     FormsModule,
-    RouterModule,
+    RouterModule.forRoot(appRoutes),
     MatIconModule
   ],
   providers: [],
