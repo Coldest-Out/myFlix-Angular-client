@@ -14,6 +14,9 @@
 			<button mat-button (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio)" color="primary">
 				Director
 			</button>
+			<button mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)" color="primary">
+				Synopsis
+			</button>
 			<mat-icon>favorite_border</mat-icon>
 		</mat-card-actions>
 	</mat-card>
