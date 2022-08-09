@@ -1,5 +1,6 @@
 <!-- src/app/movie-card/movie-card.component.html -->
 <app-navbar></app-navbar>
+<div class="hero-img"></div>
 <div class="movie-view" style="display: flex;">
 	<mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
 		<mat-card-header>
@@ -8,13 +9,14 @@
 		</mat-card-header>
 		<img src={{movie.ImagePath}} alt={{movie.Title}} style="width: 280px" />
 		<mat-card-actions>
-			<button mat-button (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)" color="primary">
+			<button class="button-selections" mat-button (click)="openGenreDialog(movie.Genre.Name, movie.Genre.Description)">
 				Genre
 			</button>
-			<button mat-button (click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio)" color="primary">
+			<button class="button-selections" mat-button
+				(click)="openDirectorDialog(movie.Director.Name, movie.Director.Bio)">
 				Director
 			</button>
-			<button mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)" color="primary">
+			<button class="button-selections" mat-button (click)="openSynopsisDialog(movie.Title, movie.Description)">
 				Synopsis
 			</button>
 			<button matTooltip="Favorite movie" matTooltipPosition="above" mat-icon-button

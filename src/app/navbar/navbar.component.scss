@@ -4,7 +4,7 @@
 	width: 100%;
 	z-index: 100;
 	//background: #472605;
-	background: black;
+	background: rgb(53, 33, 57);
 	//background: linear-gradient(to bottom, #ffffff, #ece9e6);
 }
 
@@ -20,7 +20,7 @@
 	margin-left: 30px;
 	font-weight: bold;
 	letter-spacing: 2px;
-	color: white;
+	color: rgb(254, 223, 234)
 }
 
 button {
@@ -31,13 +31,13 @@ button {
 }
 
 .logout {
-	color: teal;
+	color: rgb(254, 0, 91);
 }
 
 .nav-links {
 	margin-right: 35px;
 
 	.profile {
-		color: white;
+		color: rgb(254, 223, 234)
 	}
 }

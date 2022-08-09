@@ -1,5 +1,5 @@
 $backgroundColor: #f8f9fa;
-$cardColor: #fff;
+$cardColor: rgb(254, 223, 234);
 $textColor: #343a40;
 $boxShadowColor: #e9ecef;
 
@@ -18,7 +18,7 @@ $boxShadowColor: #e9ecef;
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 10px 5px 5px $boxShadowColor;
+  //box-shadow: 10px 5px 5px $boxShadowColor;
   background-color: $cardColor;
   max-width: 280px;
   width: 280px;
@@ -30,4 +30,26 @@ $boxShadowColor: #e9ecef;
   position: absolute;
   right: 5px;
   top: 5px;
+}
+
+.hero-img {
+  position: fixed;
+  top: 0;
+  background: url('../../assets/cinema.jpg');
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.button-selections {
+  margin-right: 30px;
+  font-size: 1.1em;
+  background: rgb(254, 0, 91);
+  color: rgb(253, 221, 233);
+}
+
+.button-selections:hover {
+  background: rgb(253, 221, 233);
+  color: rgb(254, 0, 91);
 }
