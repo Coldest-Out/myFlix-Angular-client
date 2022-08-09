@@ -1,8 +1,0 @@
-.movie-view {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	padding: 50 0;
-	margin-left: 5px;
-}

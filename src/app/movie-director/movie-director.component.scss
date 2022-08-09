@@ -1,0 +1,23 @@
+.director-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.director-content {
+	line-height: 2;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+@media all and (min-width: 768px) {
+	.director-container {
+		max-width: 400px;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.director-container {
+		max-width: 600px;
+	}
+}

@@ -8,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
-  //styleUrls: ['./movie-card.component.css']
+  styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
   movies: any[] = [];
