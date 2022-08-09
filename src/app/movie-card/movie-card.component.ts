@@ -5,6 +5,9 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 
+import { MovieDirectorComponent } from '../movie-director/movie-director.component';
+import { MovieGenreComponent } from '../movie-genre/movie-genre.component';
+
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
@@ -24,6 +27,21 @@ export class MovieCardComponent implements OnInit {
       this.movies = resp;
       console.log(this.movies);
       return this.movies;
+    });
+  }
+
+  openGenreDialog(name: string, description: string): void {
+    this.dialog.open(MovieGenreComponent, {
+      data: {
+        name,
+        description,
+      },
+    });
+  }
+
+  openDirectorDialog(name: string, bio: string): void {
+    this.dialog.open(MovieDirectorComponent, {
+      data: { name, bio },
     });
   }
 

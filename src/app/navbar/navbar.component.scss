@@ -1,0 +1,33 @@
+.navbar {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	background: #472605;
+	background: linear-gradient(to bottom, #ffffff, #ece9e6);
+}
+
+.nav-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 12px;
+}
+
+.app-title {
+	font-size: 22px;
+	margin-left: 30px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+button {
+	font-size: 17px;
+	letter-spacing: 1px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.nav-links {
+	margin-right: 35px;
+}
