@@ -16,6 +16,7 @@ import { SynopsisComponent } from '../synopsis/synopsis.component';
 })
 export class MovieCardComponent implements OnInit {
   movies: any[] = [];
+  favorites: any[] = [];
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -53,6 +54,29 @@ export class MovieCardComponent implements OnInit {
         Description: description,
       },
     });
+  }
+
+  onToggleFavoriteMovie(id: string): any {
+    if (this.isFav(id)) {
+      this.fetchApiData.removeFavoriteMovie(id).subscribe((resp: any) => {
+        this.snackBar.open('Removed from favorites!', 'OK', {
+          duration: 2000,
+        });
+      });
+      const index = this.favorites.indexOf(id);
+      return this.favorites.splice(index, 1);
+    } else {
+      this.fetchApiData.addFavoriteMovie(id).subscribe((response: any) => {
+        this.snackBar.open('Added to favorites!', 'OK', {
+          duration: 2000,
+        });
+      });
+    }
+    return this.favorites.push(id);
+  }
+
+  isFav(id: string): boolean {
+    return this.favorites.includes(id)
   }
 
 }
