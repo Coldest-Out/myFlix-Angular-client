@@ -27,6 +27,10 @@ $boxShadowColor: #e9ecef;
   padding: 20px 30px;
 }
 
+.mat-card:hover {
+  transform: scale(1.050)
+}
+
 .mat-icon-button {
   position: absolute;
   right: 5px;
