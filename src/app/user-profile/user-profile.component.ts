@@ -27,6 +27,10 @@ export class UserProfileComponent implements OnInit {
     public snackBar: MatSnackBar
   ) { }
 
+  /**
+   * Initialize the component loading the data
+   * @function ngOnInit
+   */
   ngOnInit(): void {
     this.getUser();
   }

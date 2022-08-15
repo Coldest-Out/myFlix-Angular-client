@@ -30,6 +30,11 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  /**
+   * Login function
+   * When successful, route to /movies
+   * @function loginUser
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {

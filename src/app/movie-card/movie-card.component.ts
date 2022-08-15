@@ -15,6 +15,7 @@ import { SynopsisComponent } from '../synopsis/synopsis.component';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent implements OnInit {
+
   movies: any[] = [];
   favorites: any[] = [];
 
@@ -23,6 +24,11 @@ export class MovieCardComponent implements OnInit {
     public dialog: MatDialog,
     public snackBar: MatSnackBar
   ) { }
+  /**
+     * Gets all the movies using API service and populate local state variable
+     * @returns array of movies objects
+     * @function getMovies
+     */
 
   ngOnInit(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
@@ -32,6 +38,11 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens the genre dialog from GenreComponent
+   * @param name: string[]
+   * @function openGenreDialog
+   */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(MovieGenreComponent, {
       data: {
@@ -41,12 +52,23 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens the director dialog from DirectorComponent
+   * @param name: string[]
+   * @function openDirectorDialog
+   */
   openDirectorDialog(name: string, bio: string): void {
     this.dialog.open(MovieDirectorComponent, {
       data: { name, bio },
     });
   }
 
+  /**
+   * Opens the synopsys dialog from SynopsysComponent
+   * @param title
+   * @param description
+   * @function openSynopsisDialog
+   */
   openSynopsisDialog(title: string, description: string): void {
     this.dialog.open(SynopsisComponent, {
       data: {
@@ -56,6 +78,11 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Add a movie to the list of favorite movies using API service
+   * @param id
+   * @function addToFavoriteMovies
+   */
   onToggleFavoriteMovie(id: string): any {
     if (this.isFav(id)) {
       this.fetchApiData.removeFavoriteMovie(id).subscribe((resp: any) => {
@@ -75,6 +102,12 @@ export class MovieCardComponent implements OnInit {
     return this.favorites.push(id);
   }
 
+  /**
+   * Checks if a movie is included in the user's list of favorite movies
+   * @param id
+   * @returns true if the movie is in the array
+   * @function isFav
+   */
   isFav(id: string): boolean {
     return this.favorites.includes(id)
   }
