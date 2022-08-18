@@ -33,14 +33,13 @@
   "typedocOptions": {
     "entryPoints": [
       "src/app/fetch-api-data.service.ts",
-      "src/app/movie-director/movie-director.component.ts",
-      "src/app/user-profile-edit/user-profile-edit.component.ts",
-      "src/app/movie-genre/movie-genre.component.ts",
       "src/app/movie-card/movie-card.component.ts",
-      "src/app/profile/user-profile.component.ts",
-      "src/app/synopsis/synopsis.component.ts",
+      "src/app/movie-genre/movie-genre.component.ts",
       "src/app/navbar/navbar.component.ts",
-      "src/app/user-login-form/user-login-form.component.ts",
+      "src/app/synopsis/synopsis.component.ts",
+      "src/app/user-login-form/user-login-from.component.ts",
+      "src/app/user-profile/user-profile.component.ts",
+      "src/app/user-profile-edit/user-profile-edit.component.ts",
       "src/app/user-registration-form/user-registration-form.component.ts",
       "src/app/welcome-page/welcome-page.component.ts"
     ],
